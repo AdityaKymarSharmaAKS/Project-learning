@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070610">
+  <meta name="description" content="Browse Student Hub subjects and study resources by semester.">
+  <title>Subjects | Student Hub</title>
+  <link rel="icon" href="assets/images/logo.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/subjects.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script defer src="js/data.js"></script>
+  <script defer src="js/admin.js"></script>
+  <script defer src="js/app.js"></script>
+  <script defer src="js/particle-field.js"></script>
+</head>
+
+<body data-page="subjects">
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="Student Hub home"><img src="assets/images/logo.png" alt=""
+          width="38" height="38"><span>student<span class="brand-accent">hub</span></span></a>
+      <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <nav class="main-nav" aria-label="Main navigation"><a href="index.html">Home</a><a class="active"
+          href="subjects.html" aria-current="page">Subjects</a><a href="help.html">Contribute</a></nav>
+      <a class="button button-small button-primary nav-cta" href="help.html">Contribute <span>↗</span></a>
+    </div>
+  </header>
+  <main class="page-main">
+    <section class="page-hero">
+      <div class="container">
+        <div class="eyebrow eyebrow-dark">THE LEARNING LIBRARY</div>
+        <h1>Explore your <span class="gradient-text">subjects.</span></h1>
+        <p>Choose one of the eight semesters, find your subject and get straight to the resources you need.</p>
+        <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Subjects</span></div>
+      </div>
+    </section>
+    <section class="container content-section">
+      <div class="catalog-toolbar">
+        <div class="search-wrap"><span class="search-symbol" aria-hidden="true">⌕</span><input id="subject-search"
+            type="search" placeholder="Search subjects or topics…" autocomplete="off"
+            aria-label="Search subjects"><kbd>Ctrl K</kbd></div><label class="filter-label"
+          for="semester-filter">SEMESTER</label><select id="semester-filter" class="select-control">
+          <option value="all">All semesters</option>
+        </select>
+      </div>
+      <div class="catalog-summary">
+        <div><span class="result-count" id="result-count">66</span><span class="summary-muted"> subjects available to
+            explore</span></div><button class="clear-filter" id="clear-filter" type="button">Clear filters ↺</button>
+      </div>
+      <div id="subject-list" class="subject-grid">
+        <div class="loading-card">Loading subjects…</div>
+      </div>
+      <div id="empty-state" class="empty-state hidden">
+        <div class="empty-icon">⌕</div>
+        <h3>No subjects found</h3>
+        <p>Try a different search or clear the selected semester.</p><button class="button button-outline"
+          id="empty-clear" type="button">Clear filters</button>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-inner"><a class="brand brand-footer" href="index.html"><img
+          src="assets/images/logo.png" alt="" width="32" height="32"><span>student<span
+            class="brand-accent">hub</span></span></a>
+      <p>Made for students. Built for better study sessions.</p>
+      <div><a href="subjects.html">Subjects</a><a href="help.html">Contribute</a></div><small>© <span data-year></span>
+        Student Hub</small>
+    </div>
+  </footer>
+</body>
+
+</html>
