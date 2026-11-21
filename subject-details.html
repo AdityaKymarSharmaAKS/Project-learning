@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070610">
+  <meta name="description" content="Open and download notes, assignments and previous papers for your subject.">
+  <title>Subject resources | Student Hub</title>
+  <link rel="icon" href="assets/images/logo.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/subjects.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script defer src="js/data.js"></script>
+  <script defer src="js/admin.js"></script>
+  <script defer src="js/app.js"></script>
+  <script defer src="js/particle-field.js"></script>
+</head>
+
+<body data-page="subject-details">
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="Student Hub home"><img src="assets/images/logo.png" alt=""
+          width="38" height="38"><span>student<span class="brand-accent">hub</span></span></a>
+      <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <nav class="main-nav" aria-label="Main navigation"><a href="index.html">Home</a><a class="active"
+          href="subjects.html" aria-current="page">Subjects</a><a href="help.html">Contribute</a></nav>
+      <a class="button button-small button-primary nav-cta" href="help.html">Contribute <span>↗</span></a>
+    </div>
+  </header>
+  <main class="page-main">
+    <section class="page-hero page-hero-compact">
+      <div class="container">
+        <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><a
+            href="subjects.html">Subjects</a><span>/</span><span id="breadcrumb-subject">Subject</span></div>
+        <div id="subject-heading">
+          <div class="loading-card">Loading subject…</div>
+        </div>
+      </div>
+    </section>
+    <section class="container content-section details-section">
+      <div class="resource-heading">
+        <div>
+          <div class="eyebrow eyebrow-dark">STUDY MATERIAL</div>
+          <h2>Resources <span class="muted-heading">for this subject</span></h2>
+          <p>Preview PDF files in your browser or download the original document.</p>
+        </div><a class="button button-outline" href="help.html">Submit a resource <span>↗</span></a>
+      </div>
+      <div class="resource-tabs" role="group" aria-label="Filter resources">
+        <button class="resource-tab active" type="button" data-resource-filter="all" aria-pressed="true">All
+          resources</button>
+        <button class="resource-tab" type="button" data-resource-filter="notes" aria-pressed="false">Notes</button>
+        <button class="resource-tab" type="button" data-resource-filter="assignments"
+          aria-pressed="false">Assignments</button>
+        <button class="resource-tab" type="button" data-resource-filter="previous-papers" aria-pressed="false">Previous
+          papers</button>
+        <button class="resource-tab" type="button" data-resource-filter="other" aria-pressed="false">Other</button>
+      </div>
+      <div class="resource-heading-meta"><span id="resource-count" class="summary-muted">0 files</span></div>
+      <div id="resource-list" class="resource-list">
+        <div class="loading-card">Loading resources…</div>
+      </div>
+      <div id="resource-empty" class="empty-state hidden">
+        <div class="empty-icon">▤</div>
+        <h3 id="resource-empty-title">No resources here yet</h3>
+        <p id="resource-empty-copy">Study material for this subject will appear here after it is added to the content
+          file.</p><a class="button button-primary" href="help.html">Contribute a resource</a>
+      </div>
+    </section>
+  </main>
+  <dialog class="pdf-preview-dialog" id="pdf-preview-dialog" aria-labelledby="pdf-preview-title">
+    <div class="pdf-preview-toolbar"><strong id="pdf-preview-title">PDF Preview</strong>
+      <div class="pdf-preview-controls"><a class="button button-outline button-small" id="pdf-preview-fallback"
+          href="assets/pdf/notes/demo-maths-notes.pdf" download>Download PDF</a><button
+          class="button button-primary button-small" id="pdf-preview-close" type="button"
+          aria-label="Close PDF preview">Close ✕</button></div>
+    </div>
+    <iframe id="pdf-preview-frame" title="PDF document preview" src="about:blank"></iframe>
+  </dialog>
+  <footer class="site-footer">
+    <div class="container footer-inner"><a class="brand brand-footer" href="index.html"><img
+          src="assets/images/logo.png" alt="" width="32" height="32"><span>student<span
+            class="brand-accent">hub</span></span></a>
+      <p>Made for students. Built for better study sessions.</p>
+      <div><a href="subjects.html">Subjects</a><a href="help.html">Contribute</a></div><small>© <span data-year></span>
+        Student Hub</small>
+    </div>
+  </footer>
+</body>
+
+</html>
